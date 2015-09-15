@@ -1,0 +1,31 @@
+Hi all,
+
+Fedora/RDO relationship topic came up few months ago on the rdo-list and
+in the meantime details have been refined in a Trello card
+https://trello.com/c/wzdl1IlZ/52-openstack-in-fedora which I'll try to summarize in this post.
+
+High level overview (aka tl;dr) is that RDO Liberty repository will be providing EL7 packages, hosted on CentOS mirrors and built as a part of CentOS CloudSIG.
+For developers using Fedora latest trunk builds of openstack-* packages
+will be available from Delorean Trunk.
+OpenStack service packages (openstack-*) will be retired in Fedora master while Oslo and OpenStack clients stay in Fedora proper to allow using Fedora as a client of OpenStack based cloud providers.
+
+Reasoning is that Fedora user population are developers who always need latest and greatest version and Delorean Trunk packages are the best match. We were trying to follow 1:1 mapping between Fedora and OpenStack release but it is getting out of sync now (current f22 is Juno, unreleased f23 is Kilo) and it's getting impossible to keep up with required dependency versions in the current stable Fedora without breaking older OpenStack release.
+There is also wasted overhead of pushing OpenStack stable updates in Fedora when stable builds are not interesting for the target population.
+For production setup EL7 platform is preferred and that's where we are going to provide stable updates in released RDO versions.
+
+Cheers,
+Alan
+
+P.S.
+DETAILS FOR openstack-* maintainers
+Here few notes for the package maintainers, until rdo-packaging is updated with the workflow.
+
+distgit will be rdo-liberty branch on github/openstack-packages/
+Create it from Fedora master + git merge --squash rpm-master
+git reset HEAD .gitignore sources .gitreview
+git checkout .gitignore sources
+
+Resolve conflicts in .spec file
+Preserve Kilo patches(if any) and changelog
+You might want to archive in ChangeLog.old like done for Kilo GA
+http://pkgs.fedoraproject.org/cgit/openstack-nova.git/commit/ChangeLog.old?id=8945622d349ef552dbc182f60485f6807d7c8708
