@@ -15,17 +15,3 @@ For production setup EL7 platform is preferred and that's where we are going to 
 
 Cheers,
 Alan
-
-P.S.
-DETAILS FOR openstack-* maintainers
-Here few notes for the package maintainers, until rdo-packaging is updated with the workflow.
-
-distgit will be rdo-liberty branch on github/openstack-packages/
-Create it from Fedora master + git merge --squash rpm-master
-git reset HEAD .gitignore sources .gitreview
-git checkout .gitignore sources
-
-Resolve conflicts in .spec file
-Preserve Kilo patches(if any) and changelog
-You might want to archive in ChangeLog.old like done for Kilo GA
-http://pkgs.fedoraproject.org/cgit/openstack-nova.git/commit/ChangeLog.old?id=8945622d349ef552dbc182f60485f6807d7c8708
