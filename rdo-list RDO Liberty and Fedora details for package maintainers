@@ -3,8 +3,7 @@ Subject: RDO Liberty and Fedora  - details for openstack-* maintainers
 
 As a followup, here are few notes for the package maintainers, until rdo-packaging documentation is updated with this workflow.
 
-distgit will be rdo-liberty branch on gerrithub/openstack-packages,
-create it from Fedora master + git merge --squash rpm-master:
+distgit will be rdo-liberty branch on gerrithub/openstack-packages, create it from Fedora master and squash merge rpm-master:
 
 git remote add -f gerrit ssh://review.gerrithub.io:29418/openstack-packages/$PROJECT # skip if already present
 git-review -s
@@ -18,7 +17,10 @@ git checkout .gitignore sources
 Resolve conflicts in .spec file
 Set correct Liberty Version: for your project
 Release: field should be pre-release 0.N until GA
-e.g. for openstack-keystone
+e.g. openstack-keystone.spec
+
+%global release_name liberty
+%global pypi_name keystone
 %global milestone .0b3
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -28,8 +30,10 @@ Epoch:          1
 Version:        8.0.0
 Release:        0.3%{?milestone}%{?dist}
 
-Preserve Kilo patches(if any) and changelog
-You might want to archive in ChangeLog.old like done for Kilo GA
+Preserve Kilo patches if any: ideally, RDO packages are pure upstream and don't need any patches in RPM
+-patches branches are as before in github/redhat-openstack/$PROJECT but since there isn't Fedora:OpenStack 1:1 anymore, branch name for RDO Liberty RPM patches will be liberty-patches.
+
+You might want to archive old changelog entries in ChangeLog.old like done for Kilo GA
 http://pkgs.fedoraproject.org/cgit/openstack-nova.git/commit/ChangeLog.old?id=8945622d349ef552dbc182f60485f6807d7c8708
 When done:
 git commit -m "Update to Liberty"
