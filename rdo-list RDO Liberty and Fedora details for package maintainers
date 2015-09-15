@@ -30,6 +30,10 @@ Epoch:          1
 Version:        8.0.0
 Release:        0.3%{?milestone}%{?dist}
 
+Get the source tarball for the current milestone e.g. milestone 3:
+Source0:        http://launchpad.net/%{pypi_name}/%{release_name}/%{release_name}-3/+download/%{pypi_name}-%{upstream_version}.tar.gz
+If Source0: is like above, rdopkg new-version --bump-only $UPSTREAM_VERSION should work.
+
 Preserve Kilo patches if any: ideally, RDO packages are pure upstream and don't need any patches in RPM
 -patches branches are as before in github/redhat-openstack/$PROJECT but since there isn't Fedora:OpenStack 1:1 anymore, branch name for RDO Liberty RPM patches will be liberty-patches.
 
@@ -37,10 +41,11 @@ You might want to archive old changelog entries in ChangeLog.old like done for K
 http://pkgs.fedoraproject.org/cgit/openstack-nova.git/commit/ChangeLog.old?id=8945622d349ef552dbc182f60485f6807d7c8708
 When done:
 git commit -m "Update to Liberty"
-git push -u gerrit rdo-liberty
+git push -u gerrit rdo-liberty:rdo-liberty
 
+For packages already in Fedora, build Liberty versions in Rawhide and ping apevec or number80 on Freenode #rdo for CloudSIG EL7 build.
 
-If you get stuck, please ping apevec or number80 on Freenode #rdo and/or reply to this thread!
+If you get stuck, please ping us on IRC and/or reply to this thread!
 
 Cheers,
 Alan
