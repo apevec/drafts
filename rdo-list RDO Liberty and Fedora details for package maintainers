@@ -13,6 +13,7 @@ git checkout rdo-liberty
 git merge --squash gerrit/rpm-master
 git reset HEAD .gitignore sources .gitreview
 git checkout .gitignore sources
+rm .gitreview
 
 Resolve conflicts in .spec file
 Set correct Liberty Version: for your project
