@@ -1,0 +1,53 @@
+Subject: RDO Liberty released in CentOS Cloud SIG
+
+TEMPLATE https://wiki.centos.org/SpecialInterestGroup/AnnouncingReleases
+
+We are pleased to announce the Liberty release of RDO, OpenStack
+distribution for Enterprise Linux operating system, in CentOS
+Cloud SIG repositories.
+OpenStack Liberty is the 12th release of the open source software for
+building public, private, and hybrid clouds.
+CentOS Special Interest Group for cloud infrastructure (Cloud SIG) is
+a group within the CentOS community that focuses on packaging and
+maintaining cloud infrastructure applications.
+
+In addition to OpenStack services, libraries and clients, RDO Liberty
+also provides Packstack, simple installer for proof-of-concept
+installations, as small as single all-in-one box and RDO Manager,
+OpenStack deployment and management tool for production environments
+based on OpenStack TripleO project.
+
+To install OpenStack Liberty using Packstack, on CentOS you can run:
+yum install centos-release-openstack-liberty
+and then follow RDO Quickstart instructions from Step 2: Install
+Packstack Installer.
+
+FIXME TBD link to RDO Manger docs?
+
+** OPTIONAL explanation that rbowen asked for: what and where is what in RDO **
+RDO project is closely tracking upstream OpenStack project using
+the Delorean tool which is producing RPM packages from upstream
+development branches.
+Since the previous OpenStack Kilo release, RDO is participating
+in the Cloud SIG and using CentOS provided infrastructure.
+Towards the end of developement cycle packages are imported into CentOS
+Cloud SIG buildsystem and get eventually published in Cloud SIG
+repositories.
+FIXME TBD add links as footnotes or inline?
+ http://trunk.rdoproject.org/
+ http://wiki.centos.org/HowTos/CommunityBuildSystem
+ http://mirror.centos.org/centos/7/cloud/x86_64/
+
+For more information please visit RDO project website rdoproject.org
+and join us on IRC Freenode #rdo channel.
+
+To get involved in the OpenStack RPM packaging effort, see
+http://beta.rdoproject.org/community/ FIXME when rbowen moves it to rdoproject.org today!
+and https://wiki.centos.org/SpecialInterestGroup/Cloud
+
+
+Special thanks to all the folks who helped with last minute testing in
+Freenode #rdo channel !
+
+Thanks,
+Alan Pevec, on behalf of RDO and Cloud SIG
