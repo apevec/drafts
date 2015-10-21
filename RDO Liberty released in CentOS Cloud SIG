@@ -1,33 +1,25 @@
 Subject: RDO Liberty released in CentOS Cloud SIG
 
-TEMPLATE https://wiki.centos.org/SpecialInterestGroup/AnnouncingReleases
+I am pleased to announce the general availability of the RDO build for OpenStack Liberty for CentOS Linux 7 x86_64, suiteable for building private, public and hybrid clouds. OpenStack Liberty is the 12th release of the open source software collaboratively built by a large number of contributors around the OpenStack.org project space.
 
-We are pleased to announce the Liberty release of RDO, OpenStack
-distribution for Enterprise Linux operating system, in CentOS
-Cloud SIG repositories.
-OpenStack Liberty is the 12th release of the open source software for
-building public, private, and hybrid clouds.
-CentOS Special Interest Group for cloud infrastructure (Cloud SIG) is
-a group within the CentOS community that focuses on packaging and
-maintaining cloud infrastructure applications.
+The RDO community project ( https://www.rdoproject.org/ ) curates, packages, builds, tests and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a founding member of the CentOS Cloud Infrastructure SIG ( https://wiki.centos.org/SpecialInterestGroup/Cloud ). The Cloud Infrastructure SIG focus on delivering a great user experience for CentOS Linux users looking to build and maintain their own onpremise, public or hybrid clouds.
 
-In addition to OpenStack services, libraries and clients, RDO Liberty
-also provides Packstack, simple installer for proof-of-concept
-installations, as small as single all-in-one box and RDO Manager,
-OpenStack deployment and management tool for production environments
-based on OpenStack TripleO project.
+In addition to the comprehensive OpenStack services, libraries and clients, this release also provides Packstack, simple installer for proof-of-concept installations, as small as single all-in-one box and RDO Manager ( https://www.rdoproject.org/RDO-Manager ) , OpenStack deployment and management tool for production environments based on OpenStack TripleO project.
 
-To install OpenStack Liberty using Packstack, on CentOS you can run:
-yum install centos-release-openstack-liberty
-and then follow RDO Quickstart instructions from Step 2: Install
-Packstack Installer.
+-------
+QuickStart:
 
-FIXME TBD link to RDO Manger docs?
+Ensure you have a fully updated CentOS Linux 7/x86_64 machine, and run :
+  sudo yum install centos-release-openstack-liberty
+  sudo yum install openstack-packstack
+  packstack --allinone
 
-** OPTIONAL explanation that rbowen asked for: what and where is what in RDO **
-RDO project is closely tracking upstream OpenStack project using
-the Delorean tool which is producing RPM packages from upstream
-development branches.
+For a more detailed quickstart please refer to the RDO Project hosted guide at https://www.rdoproject.org/QuickStart
+
+XXX: FIXME TBD link to RDO Manger docs?
+
+RDO project is closely tracking upstream OpenStack project using the Delorean tool which is producing RPM packages from upstream development branches.
+
 Since the previous OpenStack Kilo release, RDO is participating
 in the Cloud SIG and using CentOS provided infrastructure.
 Towards the end of developement cycle packages are imported into CentOS
@@ -38,13 +30,16 @@ FIXME TBD add links as footnotes or inline?
  http://wiki.centos.org/HowTos/CommunityBuildSystem
  http://mirror.centos.org/centos/7/cloud/x86_64/
 
-For more information please visit RDO project website rdoproject.org
-and join us on IRC Freenode #rdo channel.
+--------
+Getting Help:
+
+The RDO Project runs forums at : <URL?> and a q&a service <ask?>, for more developer oriented content we recommend joining the mailing list at <RDO LIST>. Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation at <RDO Docs?>.
+
+We also welcome comments and requests on the CentOS Mailing lists ( https://lists.centos.org/ ) and the CentOS IRC Channels ( #centos on irc.freenode.net ), however we have a more focused audience in the RDO venues.
 
 To get involved in the OpenStack RPM packaging effort, see
 http://beta.rdoproject.org/community/ FIXME when rbowen moves it to rdoproject.org today!
 and https://wiki.centos.org/SpecialInterestGroup/Cloud
-
 
 Special thanks to all the folks who helped with last minute testing in
 Freenode #rdo channel !
