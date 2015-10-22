@@ -32,7 +32,7 @@ Ensure you have a fully updated CentOS Linux 7/x86_64 machine, and run :
 For a more detailed quickstart please refer to the RDO Project hosted
 guide at https://www.rdoproject.org/QuickStart
 
-For RDO Manger consult https://www.rdoproject.org/RDO-Manager page.
+For RDO Manager consult https://www.rdoproject.org/RDO-Manager page.
 
 RDO project is closely tracking upstream OpenStack projects using the
 Delorean tool[1] which is producing RPM packages from upstream development
