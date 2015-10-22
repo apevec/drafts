@@ -65,11 +65,10 @@ irc.freenode.net ), however we have a more focused audience in the RDO venues.
 To get involved in the OpenStack RPM packaging effort, see
 https://www.rdoproject.org/Get_involved and
 https://wiki.centos.org/SpecialInterestGroup/Cloud  Join us in #rdo on the
-Freenode IRC network, follow us at @RDOCommunity on Twitter, and join 
-the discussion on the rdo-list mailing list at 
-https://www.redhat.com/mailman/listinfo/rdo-list And, if you're going to 
-be in Tokyo for the OpenStack Summit next week, join us on Wednesday at
-lunch for the RDO community meetup ( http://sched.co/4MYy ).
+Freenode IRC network, and follow us at @RDOCommunity on Twitter.
+And, if you're going to be in Tokyo for the OpenStack Summit next week, 
+join us on Wednesday at lunch for the RDO community meetup 
+( http://sched.co/4MYy ).
 
 I'd like to thank all RDO developers and CentOS Project for
 their effort and support resulting in this release,
